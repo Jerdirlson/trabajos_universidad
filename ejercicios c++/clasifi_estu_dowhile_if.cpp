@@ -54,4 +54,5 @@ main()
     cout<<"\nLos estudiantes regulares fueron"<<r;
     cout<<"\nLos estudiantes con otros talentos fueron"<<ot;
     cout<<"\n";
+    
 }
