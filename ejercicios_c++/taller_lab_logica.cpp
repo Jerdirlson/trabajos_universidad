@@ -56,18 +56,44 @@ compró cuatro camisas, tres pantalones, dos pares de zapatos, una chaqueta y 4
 libros (Programación, Innovación, Emprendimiento y Lógica de Programación).
 Tenga presente que cada artículo tiene un valor diferente.
 */
-
+/*
 main()
 {   
-    int num_cam, i, cont_cam, prec_cam, ttl_prc_cam, num_pant, prec_pant, ttl_prc_pant, cont_pant, num_zap, prec_zap, ttl_prc_zap, cont_zap,prec_cha, ttl_prc_cha, cont_cha, num_cha, num_lib, cont_lib, opt, val_lib1, ttl_val_lib1, val_lib2, ttl_val_lib2, val_lib3, ttl_val_lib3,val_lib4, ttl_val_lib4, cont_lib, ttl_libros, total;
+    int num_cam, i, cont_cam, prec_cam, ttl_prc_cam, num_pant, prec_pant, ttl_prc_pant, cont_pant, num_zap, prec_zap, ttl_prc_zap, cont_zap,prec_cha, ttl_prc_cha, cont_cha, num_cha, num_lib;
+    int cont_libros, opt, val_lib1, ttl_val_lib1, val_lib2, ttl_val_lib2, val_lib3, ttl_val_lib3,val_lib4, ttl_val_lib4, cont_lib, ttl_libros, total;
 
     cont_cam = 0;
+    cont_pant = 0;
+    cont_zap = 0;
+    cont_cha = 0;
     ttl_prc_cam = 0;
+    ttl_prc_pant = 0;
+    ttl_prc_zap = 0;
+    ttl_prc_cha = 0;
+    cont_libros = 0;
+    ttl_val_lib1 = 0;
+    ttl_val_lib2 = 0;
+    ttl_val_lib3 = 0;
+    ttl_val_lib4 = 0;
 
         cout<<"Ingrese la cantidad de las camisas que compro: ";
         cin>>num_cam;
 
-    do
+    
+    while (cont_cam < num_cam)
+    {
+        cout<<"Ingrese el precio de las camisas: ";
+        cin>>prec_cam;
+
+        ttl_prc_cam = ttl_prc_cam + prec_cam;
+
+        cont_cam++;
+    }
+    
+    cout<<"\nEl precio total de las camisetas es: "<<ttl_prc_cam;
+    
+    
+    /*do
     {
         cout<<"Ingrese el precio de las camisas: ";
         cin>>prec_cam;
@@ -79,62 +105,65 @@ main()
     while (cont_cam < num_cam);
 
     cout<<"\nEl precio total de las camisetas es: "<<ttl_prc_cam;
+    """Con DO WHILE es ineficiente el codigo ya que si no compro el elemento con do while igual le contaria"""
     
-    cout<<"Ingrese la cantidad de pantalones que compro: ";
+    cout<<"\n\nIngrese la cantidad de pantalones que compro: ";
         cin>>num_pant;
 
-    do
+    while (cont_pant < num_pant)
     {
-        cout<<"\nIngrese el precio de los pantalones: ";
+         cout<<"Ingrese el precio de los pantalones: ";
         cin>>prec_pant;
 
         ttl_prc_pant = ttl_prc_pant + prec_pant;
 
         cont_pant++;
-    } while (cont_pant < num_pant);
-
+    }
+    
     cout<<"\n El precio total de los pantalones es: "<<ttl_prc_pant;
 
-    cout<<"\nIngrese la cantidad de pares de zapatos que compro: ";
+    cout<<"\n\nIngrese la cantidad de pares de zapatos que compro: ";
         cin>>num_zap;
 
-    do
+    while (cont_zap < num_zap)
     {
-        cout<<"\nIngrese el precio de los pares de zapatos: ";
+        cout<<"Ingrese el precio de los pares de zapatos: ";
         cin>>prec_zap;
         
         ttl_prc_zap = ttl_prc_zap + prec_zap;
 
         cont_zap++;
-    } while (cont_zap < num_zap);
-    
+    }
+        
     cout<<"\n El precio total de los zapatos es: "<<ttl_prc_zap;
     
-    cout<<"\nIngrese la cantidad de chaquetas que compro: ";
+    cout<<"\n\nIngrese la cantidad de chaquetas que compro: ";
         cin>>num_cha;
 
-    do
+    while (cont_cha < num_cha)
     {
-        cout<<"\nIngrese el precio de las chaquetas: ";
+        cout<<"Ingrese el precio de las chaquetas: ";
         cin>>prec_cha;
         
         ttl_prc_cha = ttl_prc_cha + prec_cha;
 
         cont_cha++;
-    } while (cont_cha < num_cha);
+    }
+    
 
     cout<<"\n El precio total de las chaquetas es: "<<ttl_prc_cha;
     
-    cout<<"\nIntroduzca cuantos libros compró: ";
+    cout<<"\n\nIntroduzca cuantos libros compró: ";
     cin>>num_lib;
 
-    while (cont_lib < num_lib)
+    while (cont_libros < num_lib)
     {
         cout<<"\nElija que tipo de libro compró: ";
         cout<<"\n1.)Programacón.";
         cout<<"\n2.)Innovación.";
         cout<<"\n3.)Emprendimiento.";
         cout<<"\n4.)Lógica de programación.";
+        cout<<"\n";
         cin>>opt;
         switch (opt)
         {
@@ -148,39 +177,45 @@ main()
             cout<<"Ingrese el valor del libro de innovación: ";
             cin>>val_lib2;
 
-            ttl_val_lib2 = ttl_val_lib2 + val_lib2
+            ttl_val_lib2 = ttl_val_lib2 + val_lib2;
+            break;
         
         case 3:
             cout<<"Ingrese el valor del libro de emprendimiento: ";
             cin>>val_lib3;
 
             ttl_val_lib3 = ttl_val_lib3 + val_lib3;
+            break;
 
         case 4: 
             cout<<"Ingrese el valor del libro de lógica de programación: ";
             cin>>val_lib4;
 
             ttl_val_lib4 = ttl_val_lib4 + val_lib4;
+            break;
 
         default:
             cout<<"No selecciono una opción valida";
             break;
         }
         
-        cont_lib++;
+        cont_libros++;
     }
 
     ttl_libros = ttl_val_lib1 +ttl_val_lib2 + ttl_val_lib3 + ttl_val_lib4;
 
+    cout<<"\nEl costo total de todos los libros fue: "<<ttl_libros;
+
     total = ttl_prc_cam + ttl_prc_pant + ttl_prc_zap + ttl_prc_cha + ttl_libros;
 
-    cout<<"El costo total de todas las cosas es: "<<total;
+    cout<<"\nEl costo total de todas las cosas es: "<<total;
+    cout<<"\n";
     
-    
-
 }
 
-//Tercer ejercicio
+*/
+
+//TERCER EJERCICIO:
 
 /*Solicitar a una persona que escriba un número entero, diga cuales son los tres
 siguientes números pares enteros sucesivos; a continuación, sume los números
@@ -228,3 +263,251 @@ main()
 }
 
 */
+
+/*
+
+//CUARTO EJERCICIO:
+
+/*Solicitar a una persona que digite un número entero, diga si es par o impar; de ser
+par elévelo a la potencia 7 y si es impar calcule su factorial.*/
+/*
+main()
+{
+    int n, num_pot, i, b, acum, f;
+
+    i = 1; 
+    
+    cout<<"Ingrese un numero entero: ";
+    cin>> n;
+
+    acum = n;
+    i = 1;
+        cout<<"Cual es el numero potencia: ";
+    f = 1;
+    if (n % 2 == 0)
+    {
+        cin>> num_pot;
+
+        while (i < num_pot)
+        {
+            acum = n * acum;
+
+            i++;
+        }
+        cout<<""<< acum;
+        cout<<"\n";
+    }
+    else
+    {
+       for ( i = n; 1 < i; i--)
+       {
+           f = f * i;
+       }
+       
+       cout<<"El factorial de "<<n<<" es: "<<f;
+       cout<<"\n";
+    }
+}
+*/
+
+//QUINTO EJERCICIO: 
+
+/*Solicite tres números y con ellos calcule: la suma del doble del primer número con
+el triple del segundo menos la mitad del tercero. Repita esta operación 10 veces y
+en cada una de ella imprima los números ingresados y el valor de la operación
+realizada.
+*/
+/*
+main()
+{
+    int num1, num2, num3, r1, r2, r3, resl_fin, otro;
+
+    do
+    {
+        cout<<"Ingrese el primer numero: ";
+        cin>> num1;
+        cout<<"Ingrese el primer numero: ";
+        cin>> num2;
+        cout<<"Ingrese el primer numero: ";
+        cin>> num3;
+
+        r1 = num1 * 2;
+        r2 = num2 * 3;
+        r3 = num3 / 2;
+
+        resl_fin = r1 + r2 - r3;
+
+        cout<<"El resultado es: "<<resl_fin;
+
+        cout<<"\nOprima 1 si quiere volver a calcular otros numeros ";
+        cin>> otro; 
+    } while (otro == 1);
+    
+}
+*/
+
+//SEXTO EJERCICIO:
+/*Si una corbata cuesta una sexta parte de lo que cuesta un traje, un cinturón cuesta
+una quinta parte del mismo traje, los zapatos la mitad del valor del traje y la camisa
+dos tercios del valor de zapatos. Elabore un programa que le permita al usuario
+armar su atuendo perfecto, con solo pedirle el valor de una de las prendas de vestir
+y las prendas que va a llevar.
+*/
+
+
+
+
+//SEPTIMO EJERCICIO:
+/*Si tenemos una serie de triángulos rectángulos y nos dan el valor de uno de sus
+ángulos (no recto), ¿Cuál es el valor del tercer ángulo para cada uno de los
+triángulos?*/
+
+/*
+main()
+{
+    int ang1, vlr_ang_3, otro;
+
+    do{
+
+    cout<<"Ingrese el angulo en grados: ";
+    cin>> ang1;
+
+    vlr_ang_3 = ang1 - 90;
+
+    if (vlr_ang_3 < 0)
+    {
+        vlr_ang_3 = vlr_ang_3 * -1;
+    }
+
+    else
+    {
+
+    }
+
+    cout<<"El valor del 3 angulo es: "<<vlr_ang_3;
+    
+
+    cout<<"\nOprima 1 si quiere volver a calcular otro angulo ";
+        cin>> otro; 
+    
+    } while (otro == 1);
+
+}
+
+*/
+
+
+//OCTAVO EJERCICIO: 
+/*Un estudiante universitario está cursando actualmente 6 asignaturas; solicite las
+notas correspondientes a cada asignatura cursada, calcule el promedio obtenido y
+si es mayor que 3.5 diga que ha aprobado el semestre, de lo contrario diga que ha
+reprobado.*/
+/*
+main()
+{
+    
+    double nt1, nt2, nt3, nt4, nt5, nt6, prom;
+    int ot;
+
+    do
+    {
+
+    cout<<"Nota de la primera asignatura: ";
+    cin>> nt1;
+    cout<<"Nota de la segunda asignatura: ";
+    cin>> nt2;
+    cout<<"Nota de la tercera asignatura: ";
+    cin>> nt3;
+    cout<<"Nota de la cuarta asignatura: ";
+    cin>> nt4;
+    cout<<"Nota de la quinta asignatura: ";
+    cin>> nt5;
+    cout<<"Nota de la sexta asignatura: ";
+    cin>> nt6;
+
+    prom = (nt1 + nt2 + nt3 + nt4 + nt5 + nt6)/6;
+
+        if (prom > 3.5)
+        {
+            cout<<"\nEl estudiante ha sido aprobado";
+        }
+        else
+        {
+            cout<<"\nEl estudiante ha sido reprobado";
+        }
+
+        cout<<"\n\nOprima 1 si quiere calcular el promedio de otro estudiante ";
+        cin>>ot;
+
+    } while (ot == 1);
+}
+*/
+
+
+
+
+//NOVENO EJERCICIO:
+/*La oficina de Registro y Control Académico de la UPB está procesando las
+calificaciones del primer corte de los estudiantes de primer semestre de Ingeniería
+de Sistemas e Informática. Si se sabe que los estudiantes están cursandoactualmente 6 asignaturas;
+ solicite las notas correspondientes a cada asignatura
+cursada por cada estudiante, calcule el promedio obtenido y si es mayor que 3.5
+diga que ha aprobado el corte, de lo contrario diga que ha reprobado. Al finalizar se
+debe conocer la cantidad de estudiantes aprobados y reprobados.*/
+/*
+
+main()
+{
+    double nt1, nt2, nt3, nt4, nt5, nt6, prom, ot, cont_ap, cont_rep;
+
+    do
+    {
+
+    cout<<"Nota de la primera asignatura: ";
+    cin>> nt1;
+    cout<<"Nota de la segunda asignatura: ";
+    cin>> nt2;
+    cout<<"Nota de la tercera asignatura: ";
+    cin>> nt3;
+    cout<<"Nota de la cuarta asignatura: ";
+    cin>> nt4;
+    cout<<"Nota de la quinta asignatura: ";
+    cin>> nt5;
+    cout<<"Nota de la sexta asignatura: ";
+    cin>> nt6;
+
+    prom = (nt1 + nt2 + nt3 + nt4 + nt5 + nt6)/6;
+
+        if (prom > 3.5)
+        {
+            cout<<"\nEl estudiante ha sido aprobado";
+
+            cont_ap++;
+        }
+        else
+        {
+            cout<<"\nEl estudiante ha sido reprobado";
+
+            cont_rep++;
+        }
+
+        cout<<"\n\nOprima 1 si quiere calcular el promedio de otro estudiante ";
+        cin>>ot;
+
+    } while (ot == 1);
+
+    cout<<"El numero de estudiantes aprobados es: "<<cont_ap;
+
+    cout<<"\nEl numero de estudiantes reprobados es: "<<cont_rep;
+    cout<<"\n";
+}
+*/
+
+
+//DECIMO EJERCICIO
+/*Escriba un programa que permita leer una serie de números enteros entre -1.000 y
+1.000. Con los números ingresados, calcular la suma de los números pares, el
+producto de los impares, la potencia par de los impares, la suma de los negativos. El
+se ejecutará de dos formas: 1- la cantidad de veces que el usuario quiera, 2- que el
+usuario seleccione un número de escape; en el momento que este número sea
+ingresado finalizará la ejecución y mostrará los resultados de las operaciones.*/
