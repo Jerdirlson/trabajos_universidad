@@ -749,4 +749,5 @@ ingresado finalizará la ejecución y mostrará los resultados de las operacione
 main()
 {
     int ;
+    
 }
