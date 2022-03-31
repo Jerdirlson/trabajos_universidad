@@ -748,6 +748,7 @@ ingresado finalizará la ejecución y mostrará los resultados de las operacione
 
 main()
 {
+<<<<<<< HEAD
     int opt, num1, cnt_rep;
 
     cout<<"Como quiere que se ejecute el programa: ";
@@ -784,4 +785,8 @@ main()
     }
     
 
+=======
+    int ;
+    
+>>>>>>> 3468e5367819fb228598e98efd672557890785d2
 }
