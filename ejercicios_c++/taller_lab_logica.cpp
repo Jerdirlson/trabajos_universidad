@@ -748,45 +748,58 @@ ingresado finalizará la ejecución y mostrará los resultados de las operacione
 
 main()
 {
-<<<<<<< HEAD
-    int opt, num1, cnt_rep;
+    int opt, num1, cnt_rep, rep, i, num_prcs, num_par, num_imp;
+    opt = 0;
+    i = 0;
+    num1 = 1001;
 
+    do{
     cout<<"Como quiere que se ejecute el programa: ";
     cout<<"\n\n1.) Opción 1";
     cout<<"\n2.) Opción 2 ";
     cin>> opt;
 
+    }while ((opt > 3) || (opt < 0));
+
     if (opt == 1)
     { 
-
-        do
-        {
         
-        cout<<"Ingrese un numero entre -1000 y 1000: ";
-        cin>> num1;
-
-        } while (num1 < -1000 || num1 > 1000);      
-
 
         cout<<"Ingrese la cantidad de veces que quiere que se repita el proceso: ";
         cin>> cnt_rep; 
 
-        while (num1 < cnt_rep)
+        do
         {
-            
-        }
+            cout<<"Ingrese un numero entre -1000 y 1000: ";
+            cin>> num1;
+        } while (num1 < -1000 || num1 > 1000);
         
+            num_prcs = num1;
+            num_par = 0;
+            num_imp = 1;
 
+        do
+        {
+            if (num_prcs % 2 == 0)
+            {
+                num_par = num_par + num_prcs;
 
-    }
-    else
-    {
+            }
+            else
+            {
+                num_imp = num_imp * num_prcs;
 
+            }
+
+            num_prcs++;
+
+            i++;
+
+        } while (i < cnt_rep);
+
+        cout<<"Este es el numero par: "<< num_par;
+        cout<<"\nEste es el numero impar: "<< num_imp;
     }
     
 
-=======
-    int ;
-    
->>>>>>> 3468e5367819fb228598e98efd672557890785d2
 }
