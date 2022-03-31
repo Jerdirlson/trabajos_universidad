@@ -748,5 +748,40 @@ ingresado finalizará la ejecución y mostrará los resultados de las operacione
 
 main()
 {
-    int ;
+    int opt, num1, cnt_rep;
+
+    cout<<"Como quiere que se ejecute el programa: ";
+    cout<<"\n\n1.) Opción 1";
+    cout<<"\n2.) Opción 2 ";
+    cin>> opt;
+
+    if (opt == 1)
+    { 
+
+        do
+        {
+        
+        cout<<"Ingrese un numero entre -1000 y 1000: ";
+        cin>> num1;
+
+        } while (num1 < -1000 || num1 > 1000);      
+
+
+        cout<<"Ingrese la cantidad de veces que quiere que se repita el proceso: ";
+        cin>> cnt_rep; 
+
+        while (num1 < cnt_rep)
+        {
+            
+        }
+        
+
+
+    }
+    else
+    {
+
+    }
+    
+
 }
