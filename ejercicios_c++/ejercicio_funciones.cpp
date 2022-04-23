@@ -22,7 +22,6 @@ int getMul (int nm)
 }
 
 
-
 int main()
 {
     int num, opt, mul, otro;
@@ -32,14 +31,13 @@ int main()
 
     do
     {
-        cout<<"Ingrese el numero de la opreación que quiere realizar: ";
-        cin>> opt;
-
         cout<<"\n1.) Obtener la tabla de multiplicar del 2 al 9 ";
         cout<<"\n2.) Calcular los divisores del 2 al 9 ";
         cout<<"\n3.) Calcular fibonacci tantas veces indique el usuario ";
         cout<<"\n4.) Calcular la el factorial ";
         cout<<"\n5.) Calcular los divisores del 2 al 9 ";
+        cout<<"\n\nIngrese el numero de la opreación que quiere realizar: ";
+        cin>> opt;
 
         switch (opt)
         {
@@ -63,7 +61,7 @@ int main()
                 break;
         }
 
-            cout<<"\n1 Si quiere volver a calcular otra cosa ";
+            cout<<"\n\n1 Si quiere volver a calcular otra cosa ";
             cin>> otro;
     } while (otro == 1);
     

@@ -113,7 +113,7 @@ main()
 
     while (cont_pant < num_pant)
     {
-         cout<<"Ingrese el precio de los pantalones: ";
+        cout<<"Ingrese el precio de los pantalones: ";
         cin>>prec_pant;
 
         ttl_prc_pant = ttl_prc_pant + prec_pant;
@@ -253,7 +253,7 @@ main()
 
     cout<<"\n El acumulado de la suma es: "<<sum;
 
-     i++;
+    i++;
 
     } while (i<3);
 
@@ -300,13 +300,13 @@ main()
     }
     else
     {
-       for ( i = n; 1 < i; i--)
-       {
+        for ( i = n; 1 < i; i--)
+        {
            f = f * i;
-       }
-       
-       cout<<"El factorial de "<<n<<" es: "<<f;
-       cout<<"\n";
+    }
+    
+    cout<<"El factorial de "<<n<<" es: "<<f;
+    cout<<"\n";
     }
 }
 */
@@ -493,14 +493,14 @@ main()
         cout<<"\nEl valor de los zapatos es: "<<vlr_zap;
         cout<<"\nEl valor de la camisa es: "<<vlr_cam;
         cout<<"\n";
-  
+    
         break;
         
     case 4:
 
         cout<<"Ingrese el valor del producto: ";
         cin>> vlr;
-  
+    
         vlr_trj = vlr * 2;
         vlr_cor = vlr_trj / 6;
         vlr_cint = vlr_trj / 5; 
@@ -770,11 +770,11 @@ E=E*A;
 do{
 cout<<"ingrese la potencia par a la que desea elevar el numero: "; cin>>C;
 
-                     if(C>=0){
-      M = C%2;
-   F = 1;
-   S = 1;
-  if(M==0&&C>0){
+                    if(C>=0){
+    M = C%2;
+    F = 1;
+    S = 1;
+        if(M==0&&C>0){
     do{
     D = 1;   
     Z = 1;
@@ -782,22 +782,22 @@ cout<<"ingrese la potencia par a la que desea elevar el numero: "; cin>>C;
     F = F*D;
     S = S+1; 
     }while(S<=C);
-  cout<<"el valor de el numero "<<A<<" elevado a la potencia "<<C<<" es igual a: "<<F;
-  G++;
-  }
+    cout<<"el valor de el numero "<<A<<" elevado a la potencia "<<C<<" es igual a: "<<F;
+    G++;
+}
 
-  if(C==0){
-   G++;
-   Z=1;
-   F=1;
-   cout<<"el valor de el numero "<<A<<" elevado a la potencia "<<C<<" es igual a: "<<F;
+    if(C==0){
+    G++;
+    Z=1;
+    F=1;
+    cout<<"el valor de el numero "<<A<<" elevado a la potencia "<<C<<" es igual a: "<<F;
     }  
     if(M<0||M>0){
     cout<<"lo sentimos el numero no es valido\n";
     Z=0;}
-                              }
+    }
 
-  }while(Z==0);
+    }while(Z==0);
 
 }
 }
@@ -832,7 +832,8 @@ cout<<"\nel resultado de la sumana de los numeros negativos es igual a: "<<N;
     
     
 //Ejercicio de prueba
-/*main()
+
+int main()
 {
     int opt, num1, cnt_rep, rep, i, num_prcs, num_par, num_imp, num_neg, pot, cont_pot, potencia;
     opt = 0;
@@ -968,4 +969,3 @@ cout<<"\nel resultado de la sumana de los numeros negativos es igual a: "<<N;
     }
 
 }
-*/
